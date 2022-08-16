@@ -48,19 +48,17 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
+    // Java language implementation
+    implementation("androidx.navigation:navigation-fragment:2.5.1")
+    implementation("androidx.navigation:navigation-ui:2.5.1")
+
     // Kotlin
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$version_kotlin"
+    implementation("androidx.navigation:navigation-fragment-ktx:2.5.1")
+    implementation("androidx.navigation:navigation-ui-ktx:2.5.1")
 
-    // Constraint Layout
-    implementation "androidx.constraintlayout:constraintlayout:$version_constraint_layout"
+    // Feature module Support
+    implementation("androidx.navigation:navigation-dynamic-features-fragment:2.5.1")
 
-    // Core
-    implementation "androidx.core:core:$version_core"
-
-    // Material Design
-    implementation "com.google.android.material:material:$version_material"
-
-    // Navigation
-    implementation "android.arch.navigation:navigation-fragment-ktx:$version_navigation"
-    implementation "android.arch.navigation:navigation-ui-ktx:$version_navigation"
+    // Testing Navigation
+    androidTestImplementation("androidx.navigation:navigation-testing:2.5.1")
 }
